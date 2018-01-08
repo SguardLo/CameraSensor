@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import static android.hardware.Camera.*;
 
 public class CameraActivity extends AppCompatActivity {
@@ -17,6 +20,9 @@ public class CameraActivity extends AppCompatActivity {
     static TextView prompt;
     Button button;
     MyFaceDetectionListener faceDetectionListener = new MyFaceDetectionListener();
+    // Write a message to the database
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference().child("locations");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +40,7 @@ public class CameraActivity extends AppCompatActivity {
         FrameLayout preview = findViewById(R.id.camera_preview);
         preview.addView(mPreview);
         prompt.setText(faceDetectionListener.toString());
+        myRef.child("A4").setValue("free");
     }
 
     public static TextView getPrompt() {
@@ -43,6 +50,7 @@ public class CameraActivity extends AppCompatActivity {
     public void onClick(View view) {
         faceDetectionListener.setDetected();
         prompt.setText(faceDetectionListener.toString());
+        myRef.child("A4").setValue("free");
     }
 
     @Override

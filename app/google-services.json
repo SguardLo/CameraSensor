@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "119750993920",
+    "firebase_url": "https://parking-app-manager.firebaseio.com",
+    "project_id": "parking-app-manager",
+    "storage_bucket": "parking-app-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119750993920:android:699e3cac151d38ef",
+        "android_client_info": {
+          "package_name": "com.example.viktorherald.parkingappdatabase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119750993920-1m114csb8s7trlnr2e4mrgel8nddui7s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8A4qNLaUGz0od9adENccGizlGR0pYaBU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119750993920:android:6ffc61b033184c78",
+        "android_client_info": {
+          "package_name": "com.example.sguardLo.cameraSensor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119750993920-l3pvmokuc2eipfcanhrppnu1egiiqfuj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sguardLo.cameraSensor",
+            "certificate_hash": "3b8ec26ee54dd0bbbea663af2e6adcbed4afadb4"
+          }
+        },
+        {
+          "client_id": "119750993920-1m114csb8s7trlnr2e4mrgel8nddui7s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8A4qNLaUGz0od9adENccGizlGR0pYaBU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119750993920-1m114csb8s7trlnr2e4mrgel8nddui7s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

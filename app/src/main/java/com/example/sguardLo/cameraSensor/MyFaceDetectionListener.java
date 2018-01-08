@@ -4,6 +4,10 @@ import android.app.Activity;
 import android.hardware.Camera;
 import android.hardware.Camera.Face;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+
 /**
  * Created by Sguard Lo on 01/01/2018.
  */
@@ -11,6 +15,10 @@ import android.hardware.Camera.Face;
 public class MyFaceDetectionListener extends Activity implements Camera.FaceDetectionListener{
 
     private boolean detected = false;
+    // Write a message to the database
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference().child("locations");
+
 
     @Override
     public void onFaceDetection(Face[] faces, Camera camera) {
@@ -18,6 +26,7 @@ public class MyFaceDetectionListener extends Activity implements Camera.FaceDete
         if (faces.length > 0 && !detected){
             detected = true;
             CameraActivity.getPrompt().setText(this.toString());
+            myRef.child("A4").setValue("occupied");
         }
     }
 
