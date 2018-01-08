@@ -17,21 +17,13 @@ public class MyFaceDetectionListener extends Activity implements Camera.FaceDete
     public void onFaceDetection(Face[] faces, Camera camera) {
 
         if (faces.length > 0 && !detected){
-            Log.d("FaceDetection", "face detected: "+ faces.length +
-                    " Face 1 Location X: " + faces[0].rect.centerX() +
-                    "Y: " + faces[0].rect.centerY() );
             detected = true;
-            String string = this.toString();
-            sendText(string);
+            CameraActivity.getPrompt().setText(this.toString());
         }
     }
 
     public boolean isDetected() {
         return detected;
-    }
-
-    public void sendText(String string){
-        CameraActivity.getPrompt().setText(string);
     }
 
     public void setDetected() {
