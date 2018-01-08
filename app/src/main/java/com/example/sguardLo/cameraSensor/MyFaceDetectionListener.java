@@ -3,7 +3,6 @@ package com.example.sguardLo.cameraSensor;
 import android.app.Activity;
 import android.hardware.Camera;
 import android.hardware.Camera.Face;
-import android.util.Log;
 
 /**
  * Created by Sguard Lo on 01/01/2018.
